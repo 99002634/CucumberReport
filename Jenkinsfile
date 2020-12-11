@@ -5,6 +5,8 @@ node
             
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '5cf9bd12-2632-4100-b781-4847fab4f37c', url: 'https://github.com/99002634/CucumberReport.git']]])
         
+            echo "current build number: ${currentBuild.number}"
+            echo "previous build number: ${currentBuild.previousBuild.getNumber()}"
         }
         stage('Clean')
         {
