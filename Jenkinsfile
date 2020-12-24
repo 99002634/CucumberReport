@@ -11,13 +11,13 @@ node
         stage('Clean')
         {
            
-            bat' mvn clean '
+            sh' mvn clean '
            
         }
         stage('Execuction of Test Suite')
         {
             
-            bat 'mvn clean install -P dev '
+            sh 'mvn clean install -P dev '
             
         }
         stage('Cucumber Report')
