@@ -26,10 +26,4 @@ node
            cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'cucumber-report', pendingStepsNumber: -1, reportTitle: 'Cucumber Report', skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
            
         }
-        stage('Mail')
-        {
-        
-            emailext body: 'Check out, Execuction of Test Suite, Cucumber Report is finished', subject: 'Status', to: 'harshavardhan.ca@ltts.com'
-            
-        }
     }
